@@ -4,6 +4,8 @@ import cloudinary from "cloudinary"
 
 import authRoute from "./routes/auth.routes.js";
 import userRoute from "./routes/user.routes.js";
+import questionRoute from "./routes/question.routes.js"
+
 import connectMongoDB from "./db/connectMongoDB.js";
 import cookieParser from "cookie-parser";
 
@@ -24,6 +26,7 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoute);
 app.use("api/users", userRoute);
+app.use("api/questions", questionRoute);
 
 
 
